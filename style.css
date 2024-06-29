@@ -9,7 +9,7 @@ body, html {
     overflow: hidden; /* Prevent scrolling */
     background: url('https://cdnb.artstation.com/p/assets/images/images/045/064/081/original/darius-anton-cabin-woods.gif') no-repeat center center fixed;
     background-size: cover;
-    cursor: url('images/pixel-cursor.png') 16 16, auto; /* Custom cursor */
+    cursor: url('cursors/pixel-cursor.png') 16 16, auto; /* Custom cursor */
 }
 
 /* Remove the black overlay */
@@ -132,7 +132,7 @@ nav ul li:hover .dropdown-content {
 }
 
 .landing-text h1 {
-    font-size: 5.3em;
+    font-size: 5em; /* Adjusted font size */
     color: #FFFFF0;
     font-family: 'VT323', monospace;
     text-shadow: 0 0 10px black;
@@ -140,6 +140,7 @@ nav ul li:hover .dropdown-content {
     white-space: nowrap;
     border-right: 0.15em solid #FFFFF0;
     width: 100%;
+    max-width: 100%; /* Ensure the width doesn't exceed the screen */
     animation: typewriter 3s steps(40, end), blinkCaret 0.75s step-end infinite;
     font-weight: normal;
     margin-top: -50px; /* Move text up slightly */
@@ -175,8 +176,9 @@ nav ul li:hover .dropdown-content {
     }
 
     .landing-text h1 {
-        font-size: 4.3em;
+        font-size: 4em; /* Reduce font size for medium screens */
         margin-top: 0; /* Adjust margin for smaller screens */
+        max-width: 100%; /* Ensure the width doesn't exceed the screen */
     }
 }
 
@@ -198,8 +200,9 @@ nav ul li:hover .dropdown-content {
     }
 
     .landing-text h1 {
-        font-size: 3.5em;
+        font-size: 3em; /* Further reduce font size for small screens */
         margin-top: 0; /* Adjust margin for smaller screens */
+        max-width: 100%; /* Ensure the width doesn't exceed the screen */
     }
 }
 
