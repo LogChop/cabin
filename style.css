@@ -234,3 +234,54 @@ nav ul li:hover .dropdown-content, nav ul li .dropbtn:focus + .dropdown-content,
         min-width: 100px; /* Adjust dropdown width */
     }
 }
+
+@media (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+        position: relative;
+        z-index: 2;
+        cursor: pointer;
+        padding: 10px;
+    }
+
+    .hamburger-menu div {
+        width: 30px;
+        height: 3px;
+        background-color: #FFFFF0;
+        margin: 5px 0;
+        transition: 0.4s;
+    }
+
+    .nav-mobile {
+        display: none;
+        flex-direction: column;
+        background-color: #4F7942;
+        position: absolute;
+        top: 50px;
+        width: 100%;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .nav-mobile a {
+        color: #FFFFF0;
+        text-decoration: none;
+        padding: 10px;
+        text-align: center;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .nav-mobile a:hover {
+        background-color: #023020;
+        color: #FFFFF0;
+    }
+
+    nav ul {
+        display: none; /* Hide the desktop nav */
+    }
+}
+
+@media (min-width: 769px) {
+    .hamburger-menu {
+        display: none;
+    }
+}
