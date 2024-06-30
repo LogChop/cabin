@@ -75,7 +75,7 @@ nav ul li .dropdown-content {
     background-color: #FAA0A0; /* Changed dropdown box color to #FAA0A0 */
     min-width: 200px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1;
+    z-index: 2; /* Ensure dropdown is above other elements */
     border-radius: 5px;
     overflow: hidden;
     padding: 5px; /* Reduced padding */
@@ -84,6 +84,7 @@ nav ul li .dropdown-content {
 /* Adjust dropdown content positioning */
 nav ul li {
     position: relative;
+    z-index: 1; /* Ensure button is above other elements */
 }
 
 /* Additional styling to ensure dropdowns fit nicely */
@@ -153,6 +154,16 @@ nav ul li:hover .dropdown-content, nav ul li .dropbtn:focus + .dropdown-content,
     }
 }
 
+@keyframes typewriter {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blinkCaret {
+    from, to { border-color: transparent; }
+    50% { border-color: #FFFFF0; }
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     header {
@@ -185,29 +196,33 @@ nav ul li:hover .dropdown-content, nav ul li .dropbtn:focus + .dropdown-content,
     }
 
     nav ul li .dropdown-content {
-        min-width: 150px;
+        min-width: 150px; /* Adjust min-width */
     }
 }
 
 @media (max-width: 480px) {
     header {
-        padding: 3px 6px; /* Adjust header padding */
+        padding: 2px 4px; /* Adjust header padding */
     }
 
     nav ul {
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 5px;
-        justify-content: center;
+        flex-direction: row; /* Change from column to row */
+        flex-wrap: wrap; /* Allow wrapping */
+        gap: 5px; /* Space between items */
+        justify-content: center; /* Center the items */
     }
 
     nav ul li a {
-        padding: 6px; /* Reduce padding */
-        font-size: 1.2em; /* Reduce font size */
+        padding: 6px; /* Adjust padding */
+        font-size: 1.2em; /* Adjust font size */
+    }
+
+    .landing-page {
+        padding: 0 5px;
     }
 
     .landing-text h1 {
-        font-size: 3em; /* Further reduce font size for small screens */
+        font-size: 3em; /* Adjust font size for small screens */
         margin-top: 0; /* Adjust margin for smaller screens */
         max-width: 100%; /* Ensure the width doesn't exceed the screen */
         white-space: normal; /* Allow text to wrap */
@@ -216,17 +231,6 @@ nav ul li:hover .dropdown-content, nav ul li .dropbtn:focus + .dropdown-content,
     }
 
     nav ul li .dropdown-content {
-        min-width: 120px;
+        min-width: 100px; /* Adjust dropdown width */
     }
-}
-
-/* Add this new CSS for the typewriter effect */
-@keyframes typewriter {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-@keyframes blinkCaret {
-    from, to { border-color: transparent; }
-    50% { border-color: #FFFFF0; }
 }
