@@ -41,4 +41,12 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
+
+    // Mobile navigation toggle
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    const navMobile = document.querySelector('.nav-mobile');
+
+    hamburgerMenu.addEventListener('click', () => {
+        navMobile.style.display = navMobile.style.display === 'flex' ? 'none' : 'flex';
+    });
 });
