@@ -1,0 +1,217 @@
+/* styles.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'VT323', monospace;
+    scroll-behavior: smooth;
+    height: 100%;
+    overflow: hidden;
+    background: url('https://cdna.artstation.com/p/assets/images/images/054/229/408/original/jasontomlee-2-17-fire-final-1920x.gif') no-repeat center center fixed;
+    background-size: cover;
+    cursor: url('cursors/pixel-cursor.png') 16 16, auto;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+header {
+    background: #333333;
+    padding: 6px 12px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin: 20px auto;
+    width: fit-content;
+    position: relative;
+    z-index: 1;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+nav ul li a {
+    color: #FFFFF0;
+    text-decoration: none;
+    padding: 12px 20px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 8px;
+    font-family: 'VT323', monospace;
+    font-size: 2em;
+    cursor: pointer;
+}
+
+nav ul li a:hover, nav ul li a.touch-highlight, nav ul li a.active {
+    background-color: #666666;
+    color: #FFFFF0;
+}
+
+nav ul li .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFD700;
+    min-width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    border-radius: 5px;
+    overflow: hidden;
+    padding: 5px;
+}
+
+nav ul li {
+    position: relative;
+    z-index: 1;
+}
+
+nav ul li .dropdown-content a {
+    color: #FF4500;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+nav ul li .dropdown-content a:hover {
+    background-color: #FF8C00;
+    color: #FFFFF0;
+}
+
+nav ul li:hover .dropdown-content, nav ul li .dropbtn:focus + .dropdown-content, nav ul li .dropbtn.touch-highlight + .dropdown-content {
+    display: block;
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.info-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: calc(100vh - 60px);
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    margin-top: -20px;
+}
+
+.info-text {
+    opacity: 0;
+    animation: fadeInText 3s forwards;
+    position: relative;
+}
+
+.info-text h1 {
+    font-size: 5em;
+    color: #FFFFF0;
+    font-family: 'VT323', monospace;
+    text-shadow: 0 0 10px black;
+    margin-bottom: 20px;
+}
+
+.info-text p {
+    font-size: 1.7em;
+    color: #FFFFF0;
+    text-shadow: 0 0 5px black;
+    margin: 20px 0;
+    opacity: 0;
+    animation: fadeInParagraph 1s forwards;
+}
+
+.info-text p:nth-child(2) {
+    animation-delay: 0.5s;
+}
+.info-text p:nth-child(3) {
+    animation-delay: 1s;
+}
+.info-text p:nth-child(4) {
+    animation-delay: 1.5s;
+}
+.info-text p:nth-child(5) {
+    animation-delay: 2s;
+}
+.info-text p:nth-child(6) {
+    animation-delay: 2.5s;
+}
+
+.go-home {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    color: #333333;
+    text-decoration: none;
+    opacity: 0.7;
+    font-size: 1.5em;
+}
+
+.go-home:hover {
+    opacity: 1;
+}
+
+@keyframes fadeInText {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeInParagraph {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 4px 8px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    nav ul li a {
+        padding: 8px 12px;
+        font-size: 1.5em;
+    }
+
+    .info-page {
+        padding: 0 5px;
+    }
+
+    .info-text h1 {
+        font-size: 3em;
+    }
+
+    .info-text p {
+        font-size: 1.2em;
+    }
+
+    nav ul li .dropdown-content {
+        min-width: 120px;
+    }
+}
