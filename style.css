@@ -9,7 +9,7 @@ body, html {
     overflow: hidden; /* Prevent scrolling */
     background: url('https://cdnb.artstation.com/p/assets/images/images/045/064/081/original/darius-anton-cabin-woods.gif') no-repeat center center fixed;
     background-size: cover;
-    cursor: url('cursors/pixel-cursor.png') 16 16, auto; /* Custom cursor */
+    cursor: url('pixel-cursor.png') 16 16, auto; /* Custom cursor */
 }
 
 /* Add a semi-transparent black overlay to dim the background */
